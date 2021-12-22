@@ -1,4 +1,5 @@
 https://dribbble.com/ untuk mencari inspirasi UI
+bootsnip.com untuk mencari snippet bootstrap
 
 ml-auto = membuat item menjadi memiliki margin maksimal disebalah kanan
 ml, mr, mt, mb = margin left right top bottom
@@ -11,3 +12,4 @@ col-lg =
 
 bg = backgorund
 navbar = navigation bar
+carousel = slide widget

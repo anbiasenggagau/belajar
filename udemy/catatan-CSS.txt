@@ -80,8 +80,8 @@ optional
 
 Position Properthy
 
-absolute : menempatkan suatu object html sesuai dengan koordinat parent-nya
-relative : menempatkan suatu object html dengan titik acuannya berada di pojok kiri atas (anggap sebagai posisi awal suatu object, dan mulai penggeseran dari titik tersebut)
+absolute : menempatkan suatu object html dengan titik acuannya berada di pojok kiri atas (anggap sebagai posisi awal suatu object, dan mulai penggeseran dari titik tersebut)
+relative : menempatkan suatu object html sesuai dengan koordinat parent-nya
 
 ==========================================================================================================
 
@@ -112,6 +112,10 @@ rem -> sama seperti %, 1 rem = 100%
 Float
 
 manfaat kan float hanya untuk wrap text
+
+==========================================================================================================
+
+media query : Merupakan fungsi pada css yang mampu mengubah style dari tampilan web dengan kondisi tertentu, contohnya adalah ukuran layar
 
 ==========================================================================================================
 

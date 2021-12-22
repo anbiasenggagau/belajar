@@ -15,7 +15,7 @@ h1{
 }
 
 .container-fluid{
-    padding: 3% 15%;
+    padding: 3% 15% 7%;
 }
 
 .navbar{
@@ -42,15 +42,27 @@ h1{
 
 .download-button{
     margin: 5% 3% 5% 0%;
+    
 }
+ @media (max-width:973px){
+     .download-button{
+         width: 40% !important;
+     }
+ }
 
 .title-image{
-    width: 60%;
+    width: 50%;
     transform: rotate(25deg);
+    position: absolute;
+    right: 30%;
+;
 }
 
 #features{
     padding: 7% 15%;
+    background-color: white;
+    position: relative;
+    
 }
 
 h3{
@@ -79,7 +91,7 @@ h3{
 
 #testimonials{
     background-color: #ef8172;
-    padding: 7% 15%;
+    /* padding: 7% 15%; */
     text-align: center;
     color: white;
 }
@@ -103,4 +115,53 @@ h2{
     width: 300px;
     margin: 20px 20px;
     margin-bottom: 7%;
+}
+
+.carousel-item{
+    padding: 7% 15%;
+}
+
+#pricing{
+    padding: 100px;
+}
+
+.pricing-column{
+    padding: 3% 2%;
+}
+
+@media (max-width: 1028px){
+    .title-image{
+        position: static;
+        transform: rotate(0);
+    }
+    #title-1{
+        text-align: center;
+        font-size: 40px !important;
+    }
+}
+
+#cta{
+    background-color: #ff4c68;
+    color: white;
+    text-align: center;
+    padding: 7% 15%;
+
+}
+
+#cta h3{
+    font-size: 3.5rem !important;
+    font-family: "Ubuntu";
+    line-height: 1.5;
+}
+
+#footer{
+    background-color: #ffffff;
+    text-align: center;
+    padding: 7% 15%;
+}
+#footer i{
+    margin:20px 15px;
+}
+#footer p{
+    color: grey;
 }
