@@ -1,0 +1,52 @@
+*{
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+}
+
+body{
+	text-align: center;
+	background-color: #F3F0D7;
+}
+
+.container{
+	width: 600px;
+	margin: 50px auto;
+	border: 5px solid white;
+	overflow: auto;
+}
+
+img{
+	width: 600px;
+	height: 400px;
+
+}
+
+div.thumbnail *{
+	width: 200px;
+	height: 133.328px;
+	text-align: left;
+	float: left;
+	border: 2px solid white;
+	box-sizing: border-box;
+}
+
+div.thumbnail *:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+@keyframes fadeIn{
+	to{
+		opacity: 1;
+	}
+}
+
+.fade{
+	opacity: 0;
+	animation: fadeIn 0.5s forwards;
+}
+
+.active{
+	opacity: 0.5;
+}

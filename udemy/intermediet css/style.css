@@ -1,0 +1,28 @@
+body{
+    margin: 0px !important;
+}
+
+div{
+    background-color: #e4f9f5;
+    /*border-width: 0px 10px 20px 30px;
+    border-color: black;
+    border-style: dotted;
+    width: 100px;
+    height: 100px;
+    margin: auto; */
+}
+div.middle{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+
+div.bottom{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+}
+
+h1{
+    margin-top: 0px;    
+}

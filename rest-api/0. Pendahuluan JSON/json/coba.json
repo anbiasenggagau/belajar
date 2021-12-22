@@ -1,0 +1,30 @@
+[
+    {
+        "nama": "Muhammad Anbia Senggagau",
+        "umur": 23,
+        "nim": 13117056,
+        "lulus": true,
+        "hobby": [
+            "olahraga",
+            "main game"
+        ],
+        "pembimbing": {
+            "pembimbing1": "Swadexi Istiqphara",
+            "pembimbing2": "Heriansyah"
+        }
+    },
+    {
+        "nama": "Muhammad Anbia Senggagau",
+        "umur": 23,
+        "nim": 13117056,
+        "lulus": true,
+        "hobby": [
+            "olahraga",
+            "main game"
+        ],
+        "pembimbing": {
+            "pembimbing1": "Swadexi Istiqphara",
+            "pembimbing2": "Heriansyah"
+        }
+    }
+]

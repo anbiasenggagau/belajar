@@ -1,0 +1,122 @@
+Selector
+
+Selector by ID
+
+#id{
+	
+}
+
+#id-lain{
+	
+}
+
+section#b ul{ 				// mencari tag ul yang berada di dalam tag section ber-ID 'b'
+	
+}
+
+div#a ul li img{			// mencari tag img yang berada di dalam tag li yang berada di dalam tag ul yang berada di dalam tag div yang ber-ID 'a'
+	
+}
+
+Selector by Class
+
+.kelas{
+	
+}
+
+.kelas-lain{
+	
+}
+
+p.kelas{				// mencari tag p yang mempunyai class 'kelas'
+	
+}
+
+div.kelas-lain ul li img{ // mencari tag img yang berada di dalam tag li yang berada di dalam tag ul yang berada di dalam tag p yang ber-ID 'kelas-lain'
+	
+}
+
+Selector by Parent and Child
+
+ul li img{ 					// mencari tag img di dalam tag li yang berada di dalam tag ul
+	
+}
+
+Selector by Attribute
+
+input[name=red]{  			// mencari tag input yang mempunyai attribute name yang bernilai red
+	
+}
+
+Selector by State
+
+a:hover{ 					// mencari tag input a ketika cursor mouse berada di atas element a
+	
+}
+
+a:active{					// mencari tag input a ketika cursor mouse meng-klik element a
+	
+}
+
+etc.
+
+Selector by nth-Child
+
+li:nth-child(2){			// mencari tag li yang ke 2
+	
+}
+
+==========================================================================================================
+
+border attribute yang harus dimiliki supaya bordernya muncul
+1. border-width
+2. border-style
+3. border-color
+
+optional
+1. border-radius
+
+==========================================================================================================
+
+Position Properthy
+
+absolute : menempatkan suatu object html sesuai dengan koordinat parent-nya
+relative : menempatkan suatu object html dengan titik acuannya berada di pojok kiri atas (anggap sebagai posisi awal suatu object, dan mulai penggeseran dari titik tersebut)
+
+==========================================================================================================
+
+Display Properthy
+
+Block : Selalu mengambil satu baris penuh sehingga akan selalu membuat baris baru, lebar elemen bisa diatur
+Inline : Selalu mengambil lebar elemen seperlunya sehingga susunannya akan menjadi seperti deret, tidak bisa mengatur lebar elemen
+Inline-Block : Selalu mengambil lebar elemen seperlunya sehingga susunannya akan menjadi seperti deret, lebar elemen bisa diatur
+Hidden : Element akan disembunyikan namun posisi element tersebut tidak bisa ditimpa element lain
+None : Element akan disembunyikan namun posisi element tersebut dapat ditimpa element lain
+
+==========================================================================================================
+
+Font Properthy
+
+Usahakan gunakan mekanisme Embedded Font supaya font yang diinginkan dapat selalu muncul di layar di komuter manapun
+
+==========================================================================================================
+
+Sizing Properthy
+
+px -> mutlak, tidak peduli dengan layar penggunanya 
+% -> menyesuaikan dengan layar (100% = 16px)
+rem -> sama seperti %, 1 rem = 100%
+
+==========================================================================================================
+
+Float
+
+manfaat kan float hanya untuk wrap text
+
+==========================================================================================================
+
+Extension yang sangat diperlukan untuk web development
+1. Pesticide
+2. Measure Dimension
+
+Colorhunt untuk mengambil kode warna pastel yang bagus

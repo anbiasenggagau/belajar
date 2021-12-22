@@ -1,0 +1,41 @@
+git init 	: menginisialisasi sebuah folder untuk menjadi repository
+git status 	: mengecek status perubahan dari file yang kita buat
+git add		: memasukkan ke staging area (ruang tunggu)
+git commit	: melakukan save dari perubahan yang dibuat dari staging area
+git commit -m "pesan" 	: git commit berserta dengan pesan commit-nya
+
+git branch	: menampilkan daftar branch yang ada
+git branch div	: membuat branch baru dengan nama div
+git branch -d div : menghapus branch bernama div
+git checkout div: mengganti focus branch ke branch div
+git checkout -b div : membuat branch div lalu berganti ke branch div
+git log --all --decorate --oneline --graph	: membuat ilustrasi branch
+
+git clone <<url>>		: melakukan cloning remote repo ke local
+
+git remote add origin <<url>> : menambahkan git-remote yang terhubung ke github melalui url dengan nama branch utama, yaitu origin
+git push			: men-upload seluruh perubahan yang dibuat di local ke github
+git push origin --delete div 	: menghapus remote branch yang bernama div pada remote origin
+git pull			: men-download seluruh perubahan yang dibuat di github ke local
+git pull origin div		: men-download seluruh perubahan yang dibuat di github pada branch div ke local pada branch terkini pada remote origin
+git fetch			: download commit yang ada di github ke local
+
+git rebase main		: melakukan rebase ke branch main dari cabang terkini
+
+git push -u origin div 	: men-upload seluruh perubahan yang dibuat di local pada branch div
+
+.gitignore
+merupakan file yang berguna untuk menghalangi suatu file tertentu dari perintah git add
+
+fork
+merupakan command untuk menghubungkan github repo ke repo akun github lain (Dalam lingkup internet bukan local)
+
+contoh :
+config.txt  	--file config.txt tidak akan dimasukkan ke stagin area
+data/		--folder data tidak akan dimasukkan ke stagin area
+*.exe		--seluruh file berekstensi .exe tidak akan dimasukkan ke stagin area
+
+buka link gitignore.io untuk mendapatkan saran isi gitignore dari project kita
+
+
+(local)git rebase master	: melakukan rebase dari branch bernama local ke branch bernama master

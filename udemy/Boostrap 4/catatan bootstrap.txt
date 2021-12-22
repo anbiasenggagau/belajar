@@ -1,0 +1,13 @@
+https://dribbble.com/ untuk mencari inspirasi UI
+
+ml-auto = membuat item menjadi memiliki margin maksimal disebalah kanan
+ml, mr, mt, mb = margin left right top bottom
+
+lg = large (For tiny screen)
+md = medium (Ipad/tablet screen)
+sm = small (phone screen)
+
+col-lg = 
+
+bg = backgorund
+navbar = navigation bar

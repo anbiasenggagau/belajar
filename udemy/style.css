@@ -1,0 +1,36 @@
+div[part="top"]{
+	background-image: url("foto.png");
+	height: 1080px;
+	width: 100%;
+}
+
+.centre{
+	background-image: url("kucing.png");
+	background-repeat: no-repeat;
+	height: 1080px;
+	width: 100%;
+	padding-top: 100px;
+	color: #6D9886;
+}
+
+.right{
+	padding-left:70%;
+}
+
+.left{
+	padding-left:20%;
+}
+
+img {
+  border-radius: 50%;
+}
+
+h1 {
+	margin-top: 100px;
+}
+
+body{
+	margin: 5px;
+	text-align: center;
+	color: white;
+}
