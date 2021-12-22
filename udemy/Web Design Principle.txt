@@ -1,0 +1,47 @@
+Color Teory
+
+Red : Love Energy Intensity
+Yellow : Joy Intellect Attention
+Green : Freshness Safety Growth
+Blue : Stability Trust Serenity
+Purple : Royalty Wealth Feminity
+
+For Combining 2 Color in the same section use Color Palette teory
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9VCCT_9lQ0glp7yCFEiGZhCf7LbDIM5m-ow&usqp=CAU
+
+Pop Effect (Complementary Color) : Opposite Choice
+Analogous Color : Side by Side Choice
+
+Website Adobe Color berguna untuk melakukan seleksi diatas
+
+============================================================================================
+
+Typography
+
+Font-Family
+Serif       : Serious Old-Style Traditional Authorotive
+Sans-Serif  : Friendly Approachable Contamporary
+
+============================================================================================
+
+UI Design
+
+Human eyes tend to see the more big and contrast item in a content. From this, we can estabilish a hirarchy item for our design
+
+Make your interface seperate between each other by using the block layout
+
+Aim for 40-60 characters for each line in the element
+
+Try to make the content at the same alignment, centre alignment not always good for the content
+
+Create white space among each content, so it looks more expensive or royal
+
+Think about the audience target before choosing the style of the content
+
+============================================================================================
+
+UX Design
+
+Simplicity
+Consistency
+Reading Patterns (Used to call F-Pattern or Z-Pattern)
