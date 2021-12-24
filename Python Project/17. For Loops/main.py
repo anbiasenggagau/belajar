@@ -6,8 +6,18 @@ for item in ['John','Mosh',"James"]:
     print(item)
 print()
 
+for item in ['John','Mosh',"James"]:
+    for item1 in item:
+        print(item1)
+print()
+
 for item in [1,2,3,4]:
     print(item)
+print()
+
+for [item1,item2] in [[1,2],[3,4],[5,6]]:
+    print(item1)
+    print(item2)
 print()
 
 for item in range(10):
@@ -25,3 +35,23 @@ total = 0
 for item in harga:
     total = total + item
 print(f"Total harga belanjaan adalah {total}")
+print()
+
+# Break Continue and Pass
+
+myString = 'Sammy'
+
+for item in myString:
+    if item == 'a':
+        continue
+    print(item)
+print()
+
+for item in myString:
+    if item == 'a':
+        break
+    print(item)
+print()
+
+for item in myString:
+    pass # It just do nothing

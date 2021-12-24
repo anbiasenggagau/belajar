@@ -5,9 +5,12 @@ if isHot:
 print("Enjoy Your Day")
 
 isHot = False
+isCool = False
 
 if isHot:
     print("You should drink a cool dring")
+elif isCool and not isHot:
+    print("It's a cold day")
 else:
     print("Make sure you're in the warm place")
 print("enjoy your day")
