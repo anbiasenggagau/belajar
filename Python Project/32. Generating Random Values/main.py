@@ -1,7 +1,7 @@
 import random
 
 for item in range(3):
-    print(random.randint(0,20)) # Membangkitkan angka acak dari 10 hingga 20
+    print(random.randint(0,20)) # Membangkitkan angka acak dari 0 hingga 20
 
 print()
 print()
@@ -12,6 +12,10 @@ print()
 print()
 numbers=[1,4,7,1,5,3,8,2]
 print(random.choice(numbers))
+print()
+
+random.shuffle(numbers)
+print(numbers)
 
 # Exercise : buatlah program yang menggambarkan cara kerja dadu dengan menggunakan class
 class Dice:
@@ -21,6 +25,8 @@ class Dice:
     def shake_it(self):
         self.dadu1 = random.choice(self.roll)
         self.dadu2 = random.choice(self.roll)
+        print()
+        print("Hasil kocokan dadu")
         print(f"({self.dadu1}, {self.dadu2})")
 
 testing = Dice()

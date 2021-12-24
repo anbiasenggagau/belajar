@@ -28,6 +28,10 @@ for item in range(5, 10, 2): #formatmya -> range(angka awal, angka sesudah terak
     print(item)
 print()
 
+for index,item in enumerate('abcde'):
+    print(f"Huruf {item} berada di index ke {index}")
+print()
+
 # Exercise : buatlah program yang menghitung jumlah harga belanjaan
 harga = [50, 20, 10, 50, 70]
 total = 0

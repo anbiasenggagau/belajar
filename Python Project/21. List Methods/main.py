@@ -43,6 +43,11 @@ numbers.clear()
 print(numbers)
 print()
 
+num1 = [1,2,3]
+str =  ['a','b','c']
+print(list(zip(num1,str)))
+print()
+
 # Exercise : buatlah program yang menghilangkan angka yang sama pada list
 numbers = [5,7,6,9,1,3,6,5,4,2,7,8]
 unique = []
