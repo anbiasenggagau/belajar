@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ab6ba38-af34-429d-bdf0-1efa9ad4f144" name="Changes" comment="" />
+    <list default="true" id="2ab6ba38-af34-429d-bdf0-1efa9ad4f144" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Latihan/.idea/Latihan.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Latihan/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Latihan/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Latihan/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Latihan/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Latihan/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Latihan/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rest-api/3. Instagram &amp; YouTube API/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../rest-api/3. Instagram &amp; YouTube API/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../udemy/Boostrap 4/myWeb/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../udemy/Boostrap 4/myWeb/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../udemy/Boostrap 4/myWeb/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../udemy/Boostrap 4/myWeb/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../udemy/Boostrap 4/myWeb/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../udemy/Boostrap 4/myWeb/js/script.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../26. Function" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">

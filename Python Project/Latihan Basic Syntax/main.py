@@ -36,5 +36,5 @@
 # st = st.split(' ')
 # list = [item[0] for item in st]
 # print(list)
-
-help(list.insert)
+# print()
+# ============================================================================

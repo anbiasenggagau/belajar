@@ -53,3 +53,13 @@ section:not(#navbar, #profile, #footer), .jumbotron{
     object-fit: cover;
     margin-bottom: 2.5%;
 }
+
+.card-body{
+    background-color: #064663;
+    color: white;
+}
+
+.row.mx-auto{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
