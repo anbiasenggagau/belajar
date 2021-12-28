@@ -1,0 +1,55 @@
+/* {
+    margin: 0;
+    padding: 0;
+} */
+
+body{
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+p{
+    margin: 0;
+}
+
+section:not(#navbar, #profile, #footer), .jumbotron{
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+#activity, .jumbotron, #contact{
+    background-color: #064663 !important;
+}
+
+.jumbotron{
+    margin-bottom: 0px;
+}
+
+#activity *, #profile *, #contact *{
+    color: #ffffff;
+}
+
+#contact a{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#footer{
+    background-color: #343a40;
+    color: #ffffff;
+
+    padding-top: 0.7%;
+    padding-bottom: 0.7%;
+}
+
+#activity h1{
+    text-align: center;
+}
+
+#activity img{
+    margin: auto;
+    width: 650px!important;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 2.5%;
+}
