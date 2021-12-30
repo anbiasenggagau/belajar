@@ -1,0 +1,12 @@
+{
+  "name": "4.-npm-module",
+  "version": "1.0.0",
+  "description": "Belajar Node JS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node script",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anbia",
+  "license": "ISC"
+}

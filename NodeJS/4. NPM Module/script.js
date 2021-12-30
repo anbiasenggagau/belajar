@@ -1,0 +1,1 @@
+console.log("Fungsi ini dipanggil melalui NPM");
