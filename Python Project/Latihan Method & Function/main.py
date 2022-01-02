@@ -4,8 +4,8 @@ def lesser_of_two_evens(num):
     else:
         print(max(num))
 
-number = [2,5]
-lesser_of_two_evens(number)
+lesser_of_two_evens([2,4])
+lesser_of_two_evens([2,5])
 print()
 # ===============================================================================
 
@@ -116,6 +116,20 @@ def summer_69(number):
 print(summer_69([1,3,5]))
 print(summer_69([4,5,6,7,8,9]))
 print(summer_69([2,1,6,9,11]))
+print()
+# ===============================================================================
+
+def spy_game(nums):
+    result = []
+    for item in (nums):
+        if item == 0 or item == 7:
+            result.append(str(item))
+    result1 = ''.join(result)
+    return result1 == "007"
+
+print(spy_game([1,2,4,0,0,7,5]))
+print(spy_game([1,0,2,4,0,5,7]))
+print(spy_game([1,7,2,0,4,5,0]))
 print()
 # ===============================================================================
 
