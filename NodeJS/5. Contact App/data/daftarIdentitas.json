@@ -1,12 +1,1 @@
-[
-    {
-        "nama": "Muhammad Anbia",
-        "ktp": "87489312",
-        "email": "asd@foo.com"
-    },
-    {
-        "nama": "Senggagau",
-        "ktp": "46843",
-        "email": "23164"
-    }
-]
+[{"nama":"Muhammad Anbia","ktp":"87489312","email":"asd@foo.com"},{"nama":"Senggagau","ktp":"46843","email":"23164"},{"nama":"adas","ktp":"3214","email":"asdawda"}]
