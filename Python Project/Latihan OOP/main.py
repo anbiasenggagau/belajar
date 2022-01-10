@@ -78,3 +78,48 @@ print(anbia.balance)
 anbia.withdraw(75)
 print(anbia.balance)
 anbia.withdraw(500)
+
+# =================================================================
+
+class Belanja():
+    def __init__(self,uang=100000,lembar=10):
+        self.uang = uang
+        self.lembar = lembar
+        self.tipeUang = [1000,2000,5000,10000,20000,50000,100000]
+
+    def bayar(self,hargaBarang,jumlahLembar):
+        if hargaBarang > self.uang:
+            print("Uang tidak cukup")
+            return False
+        elif jumlahLembar > 10:
+            print("Jumlah lembar uang terlalu banyak")
+            return False
+        else:
+            jumlahUang = []
+            sum = 0
+            jumlahLembarUang = 0
+            selesai = False
+            while jumlahLembarUang != jumlahLembar:
+                if jumlahLembar == 1:
+                    for item in self.tipeUang:
+                        if item > hargaBarang:
+                            jumlahUang.append(item)
+                            jumlahLembarUang = jumlahLembarUang + 1
+                            return jumlahUang
+                else:
+                    for index in range(6,-1,-1):
+                        while self.tipeUang[index] + sum < hargaBarang :
+                            sum = sum + self.tipeUang[index]
+                            jumlahUang.append(self.tipeUang[index])
+                            jumlahLembarUang = jumlahLembarUang + 1
+                            if sum > hargaBarang:
+                                jumlahUang.pop()
+                                sum = sum - self.tipeUang[index]
+                                jumlahLembarUang = jumlahLembarUang - 1
+                    return jumlahUang
+
+bella = Belanja()
+jumlah = bella.bayar(24000,4)
+print(jumlah)
+
+
