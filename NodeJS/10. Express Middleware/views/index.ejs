@@ -1,0 +1,19 @@
+<h1>Home Page</h1>
+<h1>Halo <%= nama; %>
+</h1>
+
+<h4>Daftar Mahasiswa</h4>
+<% if (mahasiswa.length < 1) { %>
+    <p>Data Mahasiswa Kosong </p>
+    <% } else { %>
+        <% mahasiswa.forEach(mhs=> { %>
+            <ul>
+                <li>
+                    <%= mhs.nama%>
+                </li>
+                <li>
+                    <%=mhs.prodi%>
+                </li>
+            </ul>
+            <% }) %>
+                <% } %>
