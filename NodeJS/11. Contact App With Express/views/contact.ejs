@@ -1,37 +1,53 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <h3>Daftar Contact</h3>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">No.</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Nomor HP</th>
-                        <th scope="col">Info</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% contacts.forEach((element,index)=> { %>
-
-
-                        <tr>
-                            <th scope="row">
-                                <%= index+1 %>
-                            </th>
-                            <td>
-                                <%= element.nama %>
-                            </td>
-                            <td>
-                                <%= element.nohp %>
-                            </td>
-                            <td><a href="/about/?nama=<%= element.nama %>"
-                                    class="btn btn-success badge badge-pill">Detail</a>
-                            </td>
-                        </tr>
-                        <% }) %>
-                </tbody>
-            </table>
+    <a href="/assign" class="btn btn-primary mb-3">Tambah Data Contact</a>
+    <% if (msg.length>0) { %>
+        <div class="alert alert-warning" role="alert">
+            <%= msg %>
         </div>
-    </div>
+        <% } %>
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>Daftar Contact</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">Nomor HP</th>
+                                <th scope="col">Info</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if (contacts.length>0) { %>
+                                <% contacts.forEach((element,index)=> { %>
+
+
+                                    <tr>
+                                        <th scope="row">
+                                            <%= index+1 %>
+                                        </th>
+                                        <td>
+                                            <%= element.nama %>
+                                        </td>
+                                        <td>
+                                            <%= element.nohp %>
+                                        </td>
+                                        <td><a href="/about/?nama=<%= element.nama %>"
+                                                class="btn btn-success badge badge-pill">Detail</a>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                                        <% } else { %>
+                                            <div class="alert alert-danger container mr-auto" role="alert">Data contact
+                                                masih
+                                                kosong<br>
+                                                <a class="alert-link" href="/"><strong> Kembali ke halaman
+                                                        utama</strong></a>
+                                            </div>
+                                            <% } %>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 </div>

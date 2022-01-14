@@ -1,0 +1,34 @@
+<div class="container">
+    <% if (typeof errors !='undefined' ) { %>
+        <div class="alert alert-danger" role="alert">
+            <ul>
+                <% errors.forEach(element=> { %>
+                    <li>
+                        <%= element.msg %>
+                    </li>
+                    <% }) %>
+            </ul>
+        </div>
+        <% } let action=contact.tombol=="Ubah Data" ? '/assign/edit' : '/assign' %>
+            <h1>Masukkan data contact</h1>
+            <form method="post" action="<%= action %>">
+                <div class="form-group">
+                    <label for="InputNama">Nama</label>
+                    <input required type="text" class="form-control" id="InputNama" name="nama"
+                        placeholder="Insert your name" value="<%= contact.nama %>">
+                </div>
+                <div class="form-group">
+                    <label for="InputNohp">No Handphone</label>
+                    <input required type="text" class="form-control" id="InputNohp" name="nohp"
+                        placeholder="Insert your phone number" value="<%= contact.nohp %>">
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">Email</label>
+                    <input required type="email" class="form-control" id="InputEmail" name="email"
+                        placeholder="Insert your email" value="<%= contact.email %>">
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <%= contact.tombol %>
+                </button>
+            </form>
+</div>

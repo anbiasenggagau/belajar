@@ -1,3 +1,19 @@
-<h1>Halaman About</h1>
-<h3>Tentang <%= contact.nama %>
-</h3>
+<div class="container">
+    <h1>Halaman About</h1>
+    <% if (contact) { %>
+        <h3>Tentang <%= contact.nama %>
+        </h3>
+        <h3>Yang Memiliki Email <%= contact.email %>
+        </h3>
+        <a class="btn btn-primary badge mb-3" href="/assign?edit=<%= contact.nama %>"
+            onclick="return confirm('Edit data contact?')">Edit</a>
+        <a class="btn btn-danger badge mb-3" href="/contact?delete=<%= contact.nama %>"
+            onclick="return confirm('Hapus data contact?')"> Hapus</a>
+        <br>
+        <a href="/contact" class="btn btn-success badge badge-pill">Kembali ke Halaman Daftar Contact</a>
+        <% } else {%>
+            <div class="alert alert-danger container mr-auto" role="alert">Data contact tidak ditemukan<br>
+                <a class="alert-link" href="/contact"><strong> Kembali ke halaman daftar contact</strong></a>
+            </div>
+            <% } %>
+</div>
