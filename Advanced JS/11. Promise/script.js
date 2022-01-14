@@ -5,8 +5,8 @@
 // aksi (then jika tepenuhi / catch jika reject)
 
 // Contoh 1
-let ditepati = 1;
-const janji1 = new Promise((resolve, reject) => {
+let ditepati=1;
+const janji1=new Promise((resolve, reject) => {
     if (ditepati) {
         resolve('Janji telah ditepati');
     }
@@ -15,13 +15,13 @@ const janji1 = new Promise((resolve, reject) => {
     }
 })
 
-//janji1.then(response => console.log('OK! : ' + response))
-//    .catch(response => console.log('NOT OK! : ' + response));
-//console.log(jajni1);
+// janji1.then(response => console.log('OK! : '+response))
+//     .catch(response => console.log('NOT OK! : '+response));
+// console.log(janji1);
 
 // Contoh 2
-ditepati = 0;
-const janji2 = new Promise((resolve, reject) => {
+ditepati=0;
+const janji2=new Promise((resolve, reject) => {
     if (ditepati) {
         setTimeout(() => {
             resolve('Janji telah ditepati');
@@ -34,19 +34,19 @@ const janji2 = new Promise((resolve, reject) => {
     }
 })
 
-// // Akan melakukan callback promise dengan state pending, setelah selesai, barulah akan dipanggil callback lagi dengan state fulfilled, PERIKSA CONSOLE LOG
-// console.log('Mulai');
-// console.log(janji2.finally(() => console.log("Sudah Selesai Menunggu"))
-//     .then(() => console.log(janji2))
-//     .catch(() => console.log(janji2)));
-// console.log('Selesai');
+// Akan melakukan callback promise dengan state pending, setelah selesai, barulah akan dipanggil callback lagi dengan state fulfilled, PERIKSA CONSOLE LOG
+console.log('Mulai');
+console.log(janji2.finally(() => console.log("Sudah Selesai Menunggu"))
+    .then(() => console.log(janji2))
+    .catch(() => console.log(janji2)));
+console.log('Selesai');
 
 // // callback finally merupakan callback yang dipanggil ketika waktu menunggu sudah selesai, salah satu contoh penggunaan fungsi ini adalah ketika saat melakukan animasi loading pada website
 
 // Promise.all()
 // Berfungsi untuk memanggil lebih dari 2 promise sekaligus dengan menjalankan fungsi then, catch dan finally yang sama
 
-const film = new Promise(resolve => {
+const film=new Promise(resolve => {
     setTimeout(() => {
         resolve([{
             judul: 'Avengers',
@@ -56,7 +56,7 @@ const film = new Promise(resolve => {
     }, 1000);
 });
 
-const cuaca = new Promise(resolve => {
+const cuaca=new Promise(resolve => {
     setTimeout(() => {
         resolve([{
             lokasi: 'Bandar Lampung',
@@ -68,7 +68,7 @@ const cuaca = new Promise(resolve => {
 
 Promise.all([film, cuaca])
     .then(Response => {
-        const [film, cuaca] = Response;
+        const [film, cuaca]=Response;
         console.log(film);
         console.log(cuaca);
     });
