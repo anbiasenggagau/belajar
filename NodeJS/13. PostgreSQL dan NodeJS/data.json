@@ -1,1 +1,44 @@
-[{"userid":1,"nama":"Maryl","email":"mtremblot0@japanpost.jp"},{"userid":2,"nama":"Shandee","email":"sdownse1@gnu.org"},{"userid":3,"nama":"Drusie","email":"dmurrigans2@vk.com"},{"userid":4,"nama":"Elissa","email":"egidley3@cam.ac.uk"},{"userid":5,"nama":"Gus","email":"gfitchett4@linkedin.com"},{"userid":6,"nama":"Susette","email":"sgrowy5@gizmodo.com"},{"userid":7,"nama":"Jeremias","email":"jsoigne6@miitbeian.gov.cn"},{"userid":8,"nama":"Renaldo","email":"rbratley7@weibo.com"},{"userid":9,"nama":"Jennette","email":"jmeade8@bloglines.com"},{"userid":10,"nama":"Josy","email":"jcathro9@ning.com"}]
+[
+    {
+        "userid": 101,
+        "nama": "Senggagau",
+        "email": "senggagau@gmail.com",
+        "nama_universitas": null
+    },
+    {
+        "userid": 105,
+        "nama": "Andika Pratama",
+        "email": "andika@gmail.com",
+        "nama_universitas": "Universitas Gadjah Mada"
+    },
+    {
+        "userid": 106,
+        "nama": "Destiana Safitri",
+        "email": "destiana@gmail.com",
+        "nama_universitas": "Institut Teknologi Sumatera"
+    },
+    {
+        "userid": 107,
+        "nama": "Dina Yulia Sari",
+        "email": "dina@gmail.com",
+        "nama_universitas": null
+    },
+    {
+        "userid": 118,
+        "nama": "Anbia Muhammad",
+        "email": "anbia@gmail.com",
+        "nama_universitas": "Institut Teknolog Bandung"
+    },
+    {
+        "userid": 122,
+        "nama": "Muhammad Anbia",
+        "email": "anbia2@gmail.com",
+        "nama_universitas": "Universitas Indonesa"
+    },
+    {
+        "userid": 125,
+        "nama": "Mia Lestari",
+        "email": "mia@gmail.com",
+        "nama_universitas": null
+    }
+]
