@@ -44,4 +44,5 @@ for parentFolder, subFolder, file in listPath:
 f = open('sql.txt','w+')
 for item in range(1000000):
     f.write(f'\nINSERT INTO "DummyDataBase"(random) VALUES({random.randint(0,100)});')
+    print(f"Row : {item+1}")
 f.close()

@@ -1,0 +1,17 @@
+section#navbar{
+    background-color: #343a40;
+}
+
+section:not(#navbar){
+    margin-bottom: 3%;
+}
+
+#header img{
+    margin: auto;
+    width: 100vw!important;
+    height: 800px;
+    object-fit: cover;
+    margin-bottom: 2.5%;
+}
+
+

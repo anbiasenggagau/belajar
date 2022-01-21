@@ -3,13 +3,34 @@ bootsnip.com untuk mencari snippet bootstrap
 
 ml-auto = membuat item menjadi memiliki margin maksimal disebalah kanan
 ml, mr, mt, mb = margin left right top bottom
+mx-auto
+my-auto
 
 lg = large (For tiny screen)
 md = medium (Ipad/tablet screen)
 sm = small (phone screen)
 
-col-lg = 
+text-center
+text-left
+text-right
+text-justify
+
+row
+container
+col-lg-4 col-md-3
+
+alert
+alert-link
+alert-danger alert-success alert-warning
+
+img-responsive
+img-circle
+img-fluid
+rounded-circle
+
+card
 
 bg = backgorund
 navbar = navigation bar
 carousel = slide widget
+
