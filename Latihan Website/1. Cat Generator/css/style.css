@@ -14,4 +14,14 @@ section:not(#navbar){
     margin-bottom: 2.5%;
 }
 
+.carousel-item.active{
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay:0.5s ;
+}
+
+.disappear{
+    opacity: 0;
+    transition: 1s !important;
+}
 
