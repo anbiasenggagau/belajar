@@ -47,7 +47,7 @@ app.put('/assign', [
     if (!errors.isEmpty()) {
         const contact=req.body
         contact.tombol="Ubah Data"
-        res.render('assign', {
+        res.render('./assign/assign', {
             title: "Contact Page",
             layout: "layouts/main-layout",
             errors: errors.array(),
@@ -95,7 +95,7 @@ app.get('/contact', async (req, res) => {
     }
     else {
         const contacts=await Contact.find()
-        res.render('contact', {
+        res.render('./contact/contact', {
             title: 'Contact Page',
             layout: 'layouts/main-layout',
             contacts: contacts,
@@ -107,7 +107,7 @@ app.get('/contact', async (req, res) => {
 app.get('/about', async (req, res) => {
     const contact=await Contact.findOne({ nama: req.query.nama })
 
-    res.render('about', {
+    res.render('./about/about', {
         title: 'About Page',
         layout: 'layouts/main-layout',
         contact: contact
@@ -122,7 +122,7 @@ app.get('/assign', async (req, res) => {
             res.redirect('/contact')
         } else {
             contact.tombol="Ubah Data"
-            res.render('assign', {
+            res.render('./assign/assign', {
                 title: 'Contact Page',
                 layout: 'layouts/main-layout',
                 contact: contact
@@ -131,7 +131,7 @@ app.get('/assign', async (req, res) => {
     }
     else {
         let contact={ tombol: 'Tambah Data' }
-        res.render('assign', {
+        res.render('./assign/assign', {
             title: 'Contact Page',
             layout: 'layouts/main-layout',
             contact: contact
@@ -155,7 +155,7 @@ app.post('/assign', [
     async (req, res) => {
         const errors=validationResult(req);
         if (!errors.isEmpty()) {
-            res.render('assign', {
+            res.render('./assign/assign', {
                 title: "Contact Page",
                 layout: "layouts/main-layout",
                 errors: errors.array(),

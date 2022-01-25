@@ -1,9 +1,15 @@
 const mongoose=require('mongoose')
 
-mongoose.connect('mongodb+srv://anbiasenggagau:thatsmygirl@cluster0.vxsnx.mongodb.net/Contact?retryWrites=true&w=majority', {
+// mongoose.connect('mongodb+srv://anbiasenggagau:thatsmygirl@cluster0.vxsnx.mongodb.net/Contact?retryWrites=true&w=majority', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// })
+
+mongoose.connect('mongodb://localhost:27017/testing', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
+
 
 const Contact=mongoose.model('Contact', {
     nama: {
