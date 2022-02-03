@@ -36,7 +36,7 @@ app.use(
 )
 app.use(flash())
 
-postgres.connect()
+Contact.connect()
 
 app.put('/assign', [
     body('nama').custom(async (value) => {
@@ -163,6 +163,8 @@ app.post('/assign', [
             })
         }
     })
+
+
 
 app.listen(port, () => {
     console.log(`Listening to port ${port}`)

@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
 //Getting One
 router.get('/:id', getSubsriber, (req, res) => {
-    res.send(`Hello Subscribers that has name = ${res.subscriber}`)
+    res.json(res.subscriber)
 })
 
 //Creating One
