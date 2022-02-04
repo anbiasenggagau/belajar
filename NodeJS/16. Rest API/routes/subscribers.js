@@ -8,6 +8,7 @@ router.get('/', async (req, res) => {
     try {
         const subscribers=await Subscriber.find();
         res.json(subscribers)
+
     } catch (err) {
         res.status(500).json({ message: err.message })
     }
@@ -72,6 +73,13 @@ async function getSubsriber(req, res, next) {
         return res.status(500).json({ message: err.message })
     }
     res.subscriber=subscriber
+    /*
+    console.log(`V ${typeof subscriber.__v}`)
+    console.log(`ID ${typeof subscriber._id}`)
+    console.log(`Name ${typeof subscriber.name}`)
+    console.log(`subscribeDate ${typeof subscriber.subscribeDate}`)
+    console.log(`subscribedToChannel ${typeof subscriber.subscribedToChannel}`)
+    */
     next()
 }
 

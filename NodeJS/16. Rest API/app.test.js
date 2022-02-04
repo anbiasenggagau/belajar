@@ -11,6 +11,9 @@ describe('RESTFUL API Testing', () => {
             .get('/subscribers')
             .expect(200)
             .expect('Content-Type', /json/)
+            .then(response => {
+                expect(response.body.length).toBeGreaterThan(0);
+            })
     })
 
     it('Wrong id', () => {
@@ -20,22 +23,38 @@ describe('RESTFUL API Testing', () => {
 
     })
 
+    it('Wrong format of ID', () => {
+        return request(app)
+            .get('/subscribers/61ee423ras')
+            .expect(500)
+    })
+
     it('Get Spesific Subscriber', () => {
         return request(app)
             .get('/subscribers/61ee4de6da0ffe01d0d4fefd')
             .expect('Content-Type', /json/)
-            .expect(200, {
-                _id: expect.any(String),
-                name: expect.any(String),
-                subscribedToChannel: expect.any(String),
-                subscribeDate: expect.any(String),
-                __v: expect.any(Number)
-
+            .expect(200)
+            .then(response => {
+                expect(response.body).toMatchObject({
+                    _id: "61ee4de6da0ffe01d0d4fefd"
+                })
             })
     })
 
-
-
-
-
+    it('Assign new subscriber', () => {
+        return request(app)
+            .post('/subscribers')
+            .send({
+                name: "Seng",
+                subscribedToChannel: "Anbia Bohlam"
+            })
+            .expect(201)
+            .expect('Content-Type', /json/)
+            .then(res => {
+                expect(res.body).toMatchObject({
+                    name: "Seng",
+                    subscribedToChannel: "Anbia Bohlam"
+                })
+            })
+    })
 })
