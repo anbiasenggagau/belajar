@@ -1,0 +1,11 @@
+Python from Zero To Hero
+Python For Data Science and Machine Learning
+Python With TensorFlow
+
+
+JavaScript Algorithms and Data Structures
+Back End Development and APIs
+Data Analysis with Python
+Machine Learning with Python
+Scientific Computing with Python
+Quality Assurance
