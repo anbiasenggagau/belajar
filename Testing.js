@@ -1,32 +1,4 @@
-const stats={
-  max: 56.78,
-  standard_deviation: 4.34,
-  median: 34.54,
-  mode: 23.87,
-  min: -0.75,
-  average: 35.85
-};
+let regex=/([(]555[)])|^1\s5{3}-|^5{3}-5{3}[^\d]|5{10}|^1 ([(]\d+[)])|^1 456/
+let text='1 555)555-5555'
 
-const stats1={
-  max: 56.78,
-  standard_deviation: 4.34,
-  median: 34.54,
-  mode: 23.87,
-  min: -0.75,
-  average: 35.85
-};
-
-const stats2={
-  max: 56.78,
-  standard_deviation: 4.34,
-  median: 34.54,
-  mode: 23.87,
-  min: -0.75,
-  average: 35.85
-};
-
-// Only change code below this line
-const half=({ max, min }) => (max+min)/2.0;
-// Only change code above this line
-
-console.log(hal)
+console.log(regex.test(text))
