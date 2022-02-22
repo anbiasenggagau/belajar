@@ -1,17 +1,17 @@
-const express=require('express')
-const expressLayouts=require('express-ejs-layouts')
-const session=require('express-session')
-const cookieParser=require('cookie-parser')
-const flash=require('connect-flash')
-const { body, validationResult, check }=require('express-validator')
+const express = require('express')
+const expressLayouts = require('express-ejs-layouts')
+const session = require('express-session')
+const cookieParser = require('cookie-parser')
+const flash = require('connect-flash')
+const { body, validationResult, check } = require('express-validator')
 
 // Berguna untuk melakukan setup request menjadi GET POST PUT DELETE
-const methodOverride=require('method-override')
+const methodOverride = require('method-override')
 
-const Contact=require('./model/contact')
+const Contact = require('./model/contact')
 
-const app=express()
-const port=3000
+const app = express()
+const port = 3000
 
 // SetUp Method Override
 app.use(methodOverride('_method'))
@@ -34,8 +34,8 @@ app.use(flash())
 
 app.put('/assign', [
     body('nama').custom(async (value) => {
-        const duplicate=await Contact.findOne({ nama: value })
-        if (duplicate==null) {
+        const duplicate = await Contact.findOne({ nama: value })
+        if (duplicate == null) {
             throw new Error("Nama contact tidak boleh diubah!")
         }
         return true
@@ -43,10 +43,10 @@ app.put('/assign', [
     check('email', 'Email Tidak Valid').isEmail(),
     check('nohp', 'No HP Tidak Valid!').isMobilePhone('id-ID')
 ], async (req, res) => {
-    const errors=validationResult(req)
+    const errors = validationResult(req)
     if (!errors.isEmpty()) {
-        const contact=req.body
-        contact.tombol="Ubah Data"
+        const contact = req.body
+        contact.tombol = "Ubah Data"
         res.render('./assign/assign', {
             title: "Contact Page",
             layout: "layouts/main-layout",
@@ -55,8 +55,8 @@ app.put('/assign', [
         })
     }
     else {
-        const filter={ nama: req.body.nama }
-        const update=req.body
+        const filter = { nama: req.body.nama }
+        const update = req.body
         Contact.findOneAndUpdate(filter, update).then(result => {
             req.flash('msg', 'Data Contact Berhasil Diubah')
             res.redirect('/contact')
@@ -80,9 +80,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/contact', async (req, res) => {
-    if (req.query.delete!=undefined) {
-        const contact=await Contact.findOne({ nama: req.query.delete })
-        if (contact==null) {
+    if (req.query.delete != undefined) {
+        const contact = await Contact.findOne({ nama: req.query.delete })
+        if (contact == null) {
             req.flash('msg', 'Data Contact Tidak Ditemukan')
             res.redirect('/contact')
         } else {
@@ -94,7 +94,7 @@ app.get('/contact', async (req, res) => {
         }
     }
     else {
-        const contacts=await Contact.find()
+        const contacts = await Contact.find()
         res.render('./contact/contact', {
             title: 'Contact Page',
             layout: 'layouts/main-layout',
@@ -105,7 +105,7 @@ app.get('/contact', async (req, res) => {
 })
 
 app.get('/about', async (req, res) => {
-    const contact=await Contact.findOne({ nama: req.query.nama })
+    const contact = await Contact.findOne({ nama: req.query.nama })
 
     res.render('./about/about', {
         title: 'About Page',
@@ -115,13 +115,13 @@ app.get('/about', async (req, res) => {
 })
 
 app.get('/assign', async (req, res) => {
-    if (req.query.edit!=undefined) {
-        let contact=await Contact.findOne({ nama: req.query.edit })
-        if (contact==null) {
+    if (req.query.edit != undefined) {
+        let contact = await Contact.findOne({ nama: req.query.edit })
+        if (contact == null) {
             req.flash('msg', 'Data Contact Tidak Ditemukan')
             res.redirect('/contact')
         } else {
-            contact.tombol="Ubah Data"
+            contact.tombol = "Ubah Data"
             res.render('./assign/assign', {
                 title: 'Contact Page',
                 layout: 'layouts/main-layout',
@@ -130,7 +130,7 @@ app.get('/assign', async (req, res) => {
         }
     }
     else {
-        let contact={ tombol: 'Tambah Data' }
+        let contact = { tombol: 'Tambah Data' }
         res.render('./assign/assign', {
             title: 'Contact Page',
             layout: 'layouts/main-layout',
@@ -143,7 +143,7 @@ app.get('/assign', async (req, res) => {
 
 app.post('/assign', [
     body('nama').custom(async value => {
-        const duplikat=await Contact.findOne({ nama: value })
+        const duplikat = await Contact.findOne({ nama: value })
         if (duplikat) {
             throw new Error('Nama contact sudah digunakan')
         }
@@ -153,7 +153,7 @@ app.post('/assign', [
     check('nohp', 'No HP Tidak Valid!').isMobilePhone('id-ID')
 ],
     async (req, res) => {
-        const errors=validationResult(req);
+        const errors = validationResult(req);
         if (!errors.isEmpty()) {
             res.render('./assign/assign', {
                 title: "Contact Page",
@@ -162,7 +162,7 @@ app.post('/assign', [
                 contact: { tombol: "Tambah Data" }
             })
         } else {
-            const wait=await Contact.insertMany(req.body)
+            const wait = await Contact.insertMany(req.body)
             req.flash('msg', 'Data Contact Berhasil Ditambahkan')
             res.redirect('/contact')
 
