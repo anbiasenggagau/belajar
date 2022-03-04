@@ -1,12 +1,12 @@
-GET http://localhost:3000/subscribers
+GET http://localhost:3001/subscribers
 
 ###
 
-GET http://localhost:3000/subscribers/61ee4e07da0ffe01d0d4feff
+GET http://localhost:3001/subscribers/61ee4e07da0ffe01d0d4feff
 
 ###
 
-POST http://localhost:3000/subscribers
+POST http://localhost:3001/subscribers
 Content-Type: application/json
 
 {
@@ -16,11 +16,11 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/subscribers/61ee4c81ab6aac5cce8aef2d
+DELETE http://localhost:3001/subscribers/621f1cebc8016ef82697c50f
 
 ###
 
-PATCH http://localhost:3000/subscribers/61ee4de6da0ffe01d0d4fefd
+PATCH http://localhost:3001/subscribers/61ee4de6da0ffe01d0d4fefd
 Content-Type: application/json
 
 {

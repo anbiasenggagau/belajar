@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     try {
         const subscribers = await Subscriber.find();
 
-        console.log(subscribers)
+        // console.log(subscribers)
         res.json(subscribers)
 
     } catch (err) {
@@ -55,8 +55,10 @@ router.patch('/:id', getSubsriber, async (req, res) => {
 
 //Deleting One
 router.delete('/:id', getSubsriber, async (req, res) => {
+    console.log('accesed')
     try {
         await res.subscriber.remove()
+        console.log('removed')
         res.json({ message: "Deleted Subscriber" })
     } catch (err) {
         res.status(500).json({ message: err.message })
@@ -85,4 +87,4 @@ async function getSubsriber(req, res, next) {
     next()
 }
 
-module.exports = router
+module.exports = { getSubsriber, router }

@@ -31,12 +31,12 @@ describe('RESTFUL API Testing', () => {
 
     it('Get Spesific Subscriber', () => {
         return request(app)
-            .get('/subscribers/621f1cebc8016ef82697c50f')
+            .get('/subscribers/621f1d6c1ef78165b0084129')
             .expect('Content-Type', /json/)
             .expect(200)
             .then(response => {
                 expect(response.body).toMatchObject({
-                    _id: "621f1cebc8016ef82697c50f"
+                    _id: "621f1d6c1ef78165b0084129"
                 })
             })
     })
@@ -54,6 +54,19 @@ describe('RESTFUL API Testing', () => {
                 expect(res.body).toMatchObject({
                     name: "Seng",
                     subscribedToChannel: "Anbia Bohlam"
+                })
+            })
+    })
+
+    it('Delete a subscriber', () => {
+        return request(app)
+            .delete('/subscribers/621f1dc52af185bd23a956b4')
+            .expect(200)
+            .expect('Content-Type', /json/)
+            .then(res => {
+                console.log(res.body)
+                expect(res.body).toMatchObject({
+                    message: "Deleted Subscriber"
                 })
             })
     })
