@@ -12,7 +12,9 @@
 const validator = require('validator');
 
 let val = validator.isEmail('foo@bar.com');
+console.log(val);
 val = validator.isMobilePhone('0856560789', 'id-ID');
+console.log(val);
 val = validator.isNumeric('072155685');
 console.log(val);
 

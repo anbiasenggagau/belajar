@@ -1,12 +1,14 @@
-const express=require('express')
-const router=express.Router()
+const express = require('express')
+const router = express.Router()
 
-const Subscriber=require('../model/subscribers')
+const Subscriber = require('../model/subscribers')
 
 //Getting All
 router.get('/', async (req, res) => {
     try {
-        const subscribers=await Subscriber.find();
+        const subscribers = await Subscriber.find();
+
+        console.log(subscribers)
         res.json(subscribers)
 
     } catch (err) {
@@ -21,13 +23,13 @@ router.get('/:id', getSubsriber, (req, res) => {
 
 //Creating One
 router.post('/', async (req, res) => {
-    const subscriber=new Subscriber({
+    const subscriber = new Subscriber({
         name: req.body.name,
         subscribedToChannel: req.body.subscribedToChannel
     })
     // Checking if the user input all required properties
     try {
-        const newSubscriber=await subscriber.save()
+        const newSubscriber = await subscriber.save()
         res.status(201).json(newSubscriber)
     } catch (err) {
         res.status(400).json({ message: err.message })
@@ -37,14 +39,14 @@ router.post('/', async (req, res) => {
 //Updating One
 // PATCH berguna untuk mengedit field yang didefinisikan oleh user, sedangkan yang tidak didefinisikan tidak diubah
 router.patch('/:id', getSubsriber, async (req, res) => {
-    if (req.body.name!=null) {
-        res.subscriber.name=req.body.name
+    if (req.body.name != null) {
+        res.subscriber.name = req.body.name
     }
-    if (req.body.subscribedToChannel!=null) {
-        res.subscriber.subscribedToChannel=req.body.subscribedToChannel
+    if (req.body.subscribedToChannel != null) {
+        res.subscriber.subscribedToChannel = req.body.subscribedToChannel
     }
     try {
-        const updatedSubscriber=await res.subscriber.save()
+        const updatedSubscriber = await res.subscriber.save()
         res.json(updatedSubscriber)
     } catch (err) {
         res.status(400).json({ message: err.message })
@@ -65,14 +67,14 @@ router.delete('/:id', getSubsriber, async (req, res) => {
 async function getSubsriber(req, res, next) {
     let subscriber
     try {
-        subscriber=await Subscriber.findById(req.params.id)
-        if (subscriber==null) {
+        subscriber = await Subscriber.findById(req.params.id)
+        if (subscriber == null) {
             return res.status(404).json({ message: "Cannot Find subscriber" })
         }
     } catch (err) {
         return res.status(500).json({ message: err.message })
     }
-    res.subscriber=subscriber
+    res.subscriber = subscriber
     /*
     console.log(`V ${typeof subscriber.__v}`)
     console.log(`ID ${typeof subscriber._id}`)
@@ -83,4 +85,4 @@ async function getSubsriber(req, res, next) {
     next()
 }
 
-module.exports=router
+module.exports = router
