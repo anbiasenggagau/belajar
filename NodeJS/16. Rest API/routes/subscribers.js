@@ -5,10 +5,15 @@ const Subscriber = require('../model/subscribers')
 
 //Getting All
 router.get('/', async (req, res) => {
+
+    req.headers['Authorization'] = '123123'
+
     try {
         const subscribers = await Subscriber.find();
 
         // console.log(subscribers)
+        // console.log(req.headers)
+        // console.log(res.header())
         res.json(subscribers)
 
     } catch (err) {
