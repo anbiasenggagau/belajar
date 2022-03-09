@@ -1,8 +1,8 @@
-GET http://localhost:3000/users
+GET http://localhost:4000/users
 
 ###
 
-POST http://localhost:3000/users
+POST http://localhost:4000/users
 Content-Type: application/json
 
 {
@@ -12,15 +12,71 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/users/login
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+    "username": "gege",
+    "password" : "asdasd"
+}
+
+###
+
+POST http://localhost:4000/users/login
 Content-Type: application/json
 
 {
     "username": "anbiasenggagau",
     "password" : "asdasd"
+}
+
+###
+
+POST http://localhost:4000/users/login
+Content-Type: application/json
+
+{
+    "username": "gege",
+    "password" : "asdasd"
+}
+
+###
+
+DELETE  http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFuYmlhc2VuZ2dhZ2F1IiwicGFzc3dvcmQiOiIkMmIkMTAkVVdINm1yYml3dXl6SFRjYnpJTUhUT2RBTnVmRWdmalY0MW52LkxKVThhWkIuei9ZTzVUczYiLCJpYXQiOjE2NDY3MTE3OTl9.bNR-DUYq_P4HBWv-gJn_XyhXd9Nz6jTNGfT4gDklxZ8"
+}
+
+###
+
+GET http://localhost:4000/token
+
+###
+
+GET http://localhost:4000/token/verify
+
+###
+
+POST http://localhost:4000/token
+Content-Type: application/json
+ 
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdlZ2UiLCJwYXNzd29yZCI6IiQyYiQxMCRjWGsyYTdUdnJYM2FzRUF4MC50VEhPVHlVeVg0QjdLQi5ucVJpYlRVUlkzd2hYTGtETTJ6LiIsImlhdCI6MTY0NjcxMTU5Nn0.VB3E1Lj0N83OpYM9eXGxhRH_lzZbxs2vJNPI2fOsNZU"
 }
 
 ###
 
 GET http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFuYmlhc2VuZ2dhZ2F1IiwicGFzc3dvcmQiOiIkMmIkMTAkbHI3R2Y5RkcyYkovTS9uc05oSGFQT0VHZlZka3IzbzFxY2E0Nmp5QmlxQ25YdlZ5TGU2YnUiLCJpYXQiOjE2NDY2NDc0MDN9.diEiaMhQXUvql7GpD011Io7a1PbWHFCJ8U8cZE2mWj4
+Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdlZ2UiLCJwYXNzd29yZCI6IiQyYiQxMCRjWGsyYTdUdnJYM2FzRUF4MC50VEhPVHlVeVg0QjdLQi5ucVJpYlRVUlkzd2hYTGtETTJ6LiIsImlhdCI6MTY0NjcxMTU5Nn0.VB3E1Lj0N83OpYM9eXGxhRH_lzZbxs2vJNPI2fOsNZU
+
+###
+
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdlZ2UiLCJwYXNzd29yZCI6IiQyYiQxMCRjWGsyYTdUdnJYM2FzRUF4MC50VEhPVHlVeVg0QjdLQi5ucVJpYlRVUlkzd2hYTGtETTJ6LiIsImlhdCI6MTY0NjcxMTU5NiwiZXhwIjoxNjQ2NzExNjE2fQ.Rds_8sqlD-obcpS6pcSLSjnDgWQ36NEHaVMA0sFnI68
+
+###
+
+GET http://localhost:4000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdlZ2UiLCJwYXNzd29yZCI6IiQyYiQxMCRjWGsyYTdUdnJYM2FzRUF4MC50VEhPVHlVeVg0QjdLQi5ucVJpYlRVUlkzd2hYTGtETTJ6LiIsImlhdCI6MTY0NjcxMTY0OSwiZXhwIjoxNjQ2NzExNjY5fQ.zr_7ZmtszEpcGJAwa7DUqv6pgu0VtoHKRT6BLLeFzYg

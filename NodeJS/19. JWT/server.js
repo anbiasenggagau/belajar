@@ -1,9 +1,9 @@
 require('dotenv').config()
+
 const express = require('express')
 const cors = require('cors')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-
 
 const app = express()
 app.use(express.json())
@@ -70,11 +70,14 @@ app.post('/users/login', (req, res) => {
     }
 })
 
-app.get('/posts', authenticateToken, (req, res) => {
+app.get('/posts', (req, res) => {
+
+    authenticateToken(req, res)
+
     res.json(posts.filter(post => post.username === req.user.username))
 })
 
-function authenticateToken(req, res, next) {
+function authenticateToken(req, res) {
 
     // Bearer TOKEN
     // Get JWT Token that stored in headers
@@ -86,11 +89,10 @@ function authenticateToken(req, res, next) {
     if (token == null) return res.sendStatus(401)
 
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+        console.log('user: ')
         console.log(user)
         if (err) return res.sendStatus(403)
         req.user = user
-
-        next()
     })
 }
 
